@@ -4,7 +4,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # HS-Rec-App
 
 - to boot up use laravel/sail
-- boot with command `sail -up -d` to run docker containers in background
+- boot with command `sail up -d` to run docker containers in background
 - `sail composer install` to install additional packages
 - `sail npm install` && `sail npm run dev` to install node modules
 - `sail artisan migrate` to migrate tables
