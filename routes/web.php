@@ -16,6 +16,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
+
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
@@ -24,8 +25,21 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+
+
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+
+    // Characters
+    Route::get('/characters', [App\Http\Controllers\CharacterController::class, 'index'])->name('get-characters');
+    Route::get('/characters/{character}', [App\Http\Controllers\CharacterController::class, 'show'])->name('get-character');
+    Route::get('/characters/{character}', [App\Http\Controllers\CharacterController::class, 'edit'])->name('edit-character');
+    Route::put('/characters/{character}', [App\Http\Controllers\CharacterController::class, 'update'])->name('update-character');
+});
+
+
 
 require __DIR__.'/auth.php';
