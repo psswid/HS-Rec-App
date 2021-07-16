@@ -35,7 +35,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // Characters
     Route::get('/characters', [App\Http\Controllers\CharacterController::class, 'index'])->name('get-characters');
-    Route::get('/characters/{character}', [App\Http\Controllers\CharacterController::class, 'show'])->name('get-character');
     Route::get('/characters/{character}', [App\Http\Controllers\CharacterController::class, 'edit'])->name('edit-character');
     Route::put('/characters/{character}', [App\Http\Controllers\CharacterController::class, 'update'])->name('update-character');
 });
