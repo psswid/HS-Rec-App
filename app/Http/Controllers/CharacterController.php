@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Resources\CharacterResource;
 use Illuminate\Support\Facades\Redirect;
-use Response;
 use Inertia\Inertia;
 
 
