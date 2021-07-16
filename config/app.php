@@ -231,4 +231,35 @@ return [
 
     ],
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | 3rd party APIs
+    |--------------------------------------------------------------------------
+    |
+    | This array ensures stable immutable urls for 3rd party APIs for grabbing
+    | content used in app.
+    */
+    'api_urls' => [
+        'sw_api' => [
+            'base' => 'https://swapi.dev/api/',
+            'people' => [
+                'base' => 'https://swapi.dev/api/people/',
+                'page' => 'https://swapi.dev/api/people/?page='
+            ],
+            'planets' => [
+                'base' => 'https://swapi.dev/api/planets/',
+                'page' => 'https://swapi.dev/api/planets/?page='
+            ],
+            'films' => [
+                'base' => 'https://swapi.dev/api/films/',
+                'page' => 'https://swapi.dev/api/films/?page='
+            ],
+            'species' => [
+                'base' => 'https://swapi.dev/api/species/',
+                'page' => 'https://swapi.dev/api/species/?page='
+            ],
+        ],
+    ],
+
 ];
