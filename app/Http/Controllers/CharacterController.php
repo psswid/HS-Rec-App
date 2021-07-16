@@ -84,6 +84,4 @@ class CharacterController extends AppBaseController
         return Redirect::back()->with('success', 'Character updated.');
     }
 
-
-
 }
